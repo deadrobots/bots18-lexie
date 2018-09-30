@@ -15,7 +15,6 @@ if __name__ == "__main__":
     sys.stdout = os.fdopen(sys.stdout.fileno(), "w", 0)
     main();
 
-#completed all 7 challenges
-#further organize code: add utils and move drivetimed and waitforbutton
-#test soda grab more (drive is not straight)
+#installed ET and tophat
+#two weeks: program line follow until ET sees can - pick up and drive "home"
 
