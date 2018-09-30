@@ -16,3 +16,7 @@ clawarm_up = 1448
 claw_open = 724
 claw_close = 1500
 
+# sensors
+ET = 0
+tophat = 1  #1700
+

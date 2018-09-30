@@ -1,21 +1,21 @@
 import os, sys
 from wallaby import *
 import constants as c
-import utils as u
+from utils import *
 
 
 def driveSquare():
-    print ("driving in a 4 sided circle")
+    print ("driving in a square")
     for x in range(0, 3):  # repeated 3 times
-        u.drivetimed(95, 100, 1000)  #u. added because drivetimed and wait_for_button were moved to new file: utils
-        u.drivetimed(100, 0, 1140)  # turn right   #1300 if running on carpet
-        u.drivetimed(0, 0, 100)
+        drivetimed(95, 100, 1000)
+        drivetimed(100, 0, 1140)  # turn right   #1300 if running on carpet
+        drivetimed(0, 0, 100)
         msleep(500)
     print ("waiting for button")
-    u.drivetimed(95, 100, 1000)
-    u.drivetimed(100, 0, 1050)  # end of square routine
+    drivetimed(95, 100, 1000)
+    drivetimed(100, 0, 1050)  # end of square routine
     freeze(c.leftmotor)
-    u.wait_for_button()
+    wait_for_button()
 
 
 def grabSodaCan():
@@ -25,8 +25,8 @@ def grabSodaCan():
     msleep(500)
     set_servo_position(c.servo_clawarm, c.clawarm_sodagrab)
     msleep(500)
-    u.drivetimed(92, 100, 1200)
-    u.drivetimed(0, 0, 100)
+    drivetimed(92, 100, 1200)
+    drivetimed(0, 0, 100)
     msleep(100)
     set_servo_position(c.servo_claw, c.claw_close)
     print ("soda can grabbed")
