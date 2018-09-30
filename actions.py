@@ -5,7 +5,7 @@ import utils as u
 
 
 def driveSquare():
-    print ("driving in a square")
+    print ("driving in a 4 sided circle")
     for x in range(0, 3):  # repeated 3 times
         u.drivetimed(95, 100, 1000)  #u. added because drivetimed and wait_for_button were moved to new file: utils
         u.drivetimed(100, 0, 1140)  # turn right   #1300 if running on carpet
