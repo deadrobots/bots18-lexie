@@ -2,6 +2,7 @@ import os, sys
 from wallaby import *
 import constants as c
 from utils import *
+from drive import *
 
 
 def driveSquare():
@@ -28,9 +29,25 @@ def grabSodaCan():
     drivetimed(92, 100, 1200)
     drivetimed(0, 0, 100)
     msleep(100)
-    set_servo_position(c.servo_claw, c.claw_close)
+    set_servo_position(c.servo_claw, c.claw_sodagrab)
     print ("soda can grabbed")
     msleep(500)
     set_servo_position(c.servo_clawarm, c.clawarm_up)
     msleep(1000)
-    u.drivetimed(95, 100, 1000)
+    drivetimed(95, 100, 1000)
+
+def sensorCanGrab():
+    set_servo_position(c.servo_clawarm, c.clawarm_straightup)
+    msleep(1000)
+    set_servo_position(c.servo_claw, c.claw_close)
+    msleep(1000)
+    lineFollowUntilCan()
+    freeze(c.leftmotor)
+    freeze(c.rightmotor)
+    msleep(1000)
+    set_servo_position(c.servo_claw, c.claw_open)
+    msleep(500)
+    set_servo_position(c.servo_clawarm, c.clawarm_sodagrab)
+    msleep(1000)
+    drivetimed(20, 20, 1300)
+    set_servo_position(c.servo_claw, c.claw_sodagrab)

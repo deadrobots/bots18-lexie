@@ -5,16 +5,21 @@ import constants as c
 import actions as act
 
 
+def init():
+    enable_servos()
+
+
 def main():
     print "Hello World"
-    act.driveSquare()
-    act.grabSodaCan()
+    init()
+    #act.driveSquare()
+    #act.grabSodaCan()
+    act.sensorCanGrab()
 
 
 if __name__ == "__main__":
     sys.stdout = os.fdopen(sys.stdout.fileno(), "w", 0)
     main();
 
-#installed ET and tophat
-#two weeks: program line follow until ET sees can - pick up and drive "home"
+#completed line follow until soda can and grabbed soda can at end of routine
 
