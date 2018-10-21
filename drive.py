@@ -2,7 +2,7 @@ import os, sys
 from wallaby import *
 import constants as c
 
-
+# Be consistent with your naming conventions. This name should be in camelCase -LMB
 def drivetimed(lspeed, rspeed, time):
     motor(c.leftmotor, lspeed)
     motor(c.rightmotor, rspeed)

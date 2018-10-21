@@ -21,6 +21,7 @@ def driveSquare():
 
 def grabSodaCan():
     print ("starting soda can routine")
+	# Your enable_servos() command is already called in main(). Is it needed here, too? -LMB
     enable_servos()    #need parentheses to execute function
     set_servo_position(c.servo_claw, c.claw_open)
     msleep(500)
