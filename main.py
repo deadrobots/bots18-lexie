@@ -7,6 +7,7 @@ import actions as act
 
 def init():
     enable_servos()
+    camera_open_black()
 
 
 def main():
@@ -14,7 +15,8 @@ def main():
     init()
     #act.driveSquare()
     #act.grabSodaCan()
-    act.sensorCanGrab()
+    #act.sensorCanGrab()
+    act.cameraCanGrab()
 
 
 if __name__ == "__main__":

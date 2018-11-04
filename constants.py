@@ -11,7 +11,7 @@ servo_claw = 3
 clawarm_mid = 622
 clawarm_sodagrab = 495
 clawarm_up = 1448
-clawarm_straightup = 1627
+clawarm_straightup = 1500
 
 # servo claw values
 claw_open = 724
@@ -24,6 +24,9 @@ tophat = 1  #1700
 
 # ET values
 ETclose = 2800
+
+#channels
+red = 0
 
 
 #buttons and switches = digital sensors

@@ -13,7 +13,7 @@ def drivetimed(lspeed, rspeed, time):
 def lineFollowUntilCan():
     print ("line following")
     while analog(c.ET) < 2000:
-        if analog(c.tophat) < 1200:  # on white
+        if analog(c.tophat) < 1500:  # on white   #1200
             motor(c.leftmotor, 10)
             motor(c.rightmotor, 100)
         else:   #on black

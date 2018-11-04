@@ -37,6 +37,7 @@ def grabSodaCan():
     drivetimed(95, 100, 1000)
 
 def sensorCanGrab():
+    print ("line following & grabbing can")
     set_servo_position(c.servo_clawarm, c.clawarm_straightup)
     msleep(1000)
     set_servo_position(c.servo_claw, c.claw_close)
@@ -45,9 +46,21 @@ def sensorCanGrab():
     freeze(c.leftmotor)
     freeze(c.rightmotor)
     msleep(1000)
+    print ("grabbing soda can")
     set_servo_position(c.servo_claw, c.claw_open)
     msleep(500)
+    drivetimed(-50, -50, 1000)
     set_servo_position(c.servo_clawarm, c.clawarm_sodagrab)
     msleep(1000)
-    drivetimed(20, 20, 1300)
+    drivetimed(20, 20, 1500)
     set_servo_position(c.servo_claw, c.claw_sodagrab)
+
+def cameraCanGrab():
+    print ("camera can grab code")
+    while True:
+        camera_update()
+        #print (get_object_count(c.red))
+        x = get_object_center_x(c.red, 0)
+        print (x)
+        if x >= 70 and x <= 90:
+            print ("centered")
