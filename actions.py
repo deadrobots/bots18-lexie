@@ -65,3 +65,6 @@ def cameraCanGrab():
         print (x)
         if x >= 70 and x <= 90:
             print ("centered")
+
+def gyro():
+    pass
